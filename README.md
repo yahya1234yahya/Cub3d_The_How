@@ -1,6 +1,5 @@
-# cub3d | 42 Madrid
 
-*My first RayCaster with miniLibX 💡*
+*My first RayCaster with miniLibX *
 
 <div align="center">
     <img src="https://user-images.githubusercontent.com/40824677/156563198-ac320c5a-be9e-43cc-9bcf-cd49670661e4.gif">
@@ -23,8 +22,7 @@
 
 ## Introduction
 
-The aim of the ``cub3d`` proyect is to create a 3D game using the raycasting technique which is a rendering method implemented in the world-famous ``Wolfenstein 3D`` game. This was a group proyect and I had the honor to do it with [@mbueno-g](https://github.com/mbueno-g) again :)
-
+The aim of the ``cub3d`` proyect is to create a 3D game using the raycasting technique which is a rendering method implemented in the world-famous ``Wolfenstein 3D`` game.
 ## Map Parsing
 
 The ``cub3D`` executable receives as a single argument the map file we read, which must be of ``.cub`` filetype.
@@ -251,81 +249,3 @@ Here are a few samples of how our maps look
     <img src="https://user-images.githubusercontent.com/40824677/156563462-300565a2-9d6a-4a82-9c18-d16d3fb35ffb.gif">
 </div>
 
-To check some of our favorite layouts, see [MAPS.md](./maps/MAPS.md)
-
-
-## Installation
-
-### Cloning the repositories
-```shell
-git clone https://gitlab.com/madebypixel02/cub3d.git
-cd cub3d
-make
-```
-
-### Installing the MLX library
-
-* ``Linux``
-
-If you're not using a MacOS computer from 42, you'll need to install the libraries manually. Please refer to the [official github](https://github.com/42Paris/minilibx-linux) for more details. To install it, do the following (requires root access):
-
-```shell
-git clone https://github.com/42Paris/minilibx-linux.git
-cd minilibx-linux/
-make
-sudo cp mlx.h /usr/include
-sudo cp libmlx.a /usr/lib
-```
-
-* ``MacOS``
-
-To install the library, you will need to first install a package manager like homebrew (check [here](https://brew.sh/)) to then install the X11 package with ``brew install Xquartz``. After that you must extract the minilibx file called ``minilibx_opengl.tgz``. Then install it to your system with the following commands (requires sudo as well):
-
-```shell
-cd minilibx_opengl
-make
-sudo cp mlx.h /usr/local/include
-sudo cp libmlx.a /usr/local/lib
-sudo reboot
-```
-Note: A reboot is necessary to ensure that the ``Xquartz`` is working properly. You can test if it is by running a test example with the command ``xeyes``.
-
-### Installing the manuals
-
-If you want quick access to the mlx manuals, it is recommended that you copy the files from the ``man`` folder in [minilibx-linux](https://github.com/42Paris/minilibx-linux) to your system manuals:
-
-* ``Linux``
-```shell
-sudo cp man/man3/* /usr/share/man/man3/
-```
-Note: Depending on your Linux configuration, to get the manuals working (e.g. ``man mlx``) you will need to individually gzip all the manual files you just copied, e.g. ``sudo gzip /usr/share/man/man3/mlx.3``.
-
-* ``MacOS``
-```shell
-sudo cp man/man3/* /usr/X11/share/man/man3
-```
-
-### Usage
-
-```
-make                        compiles cub3D executable
-make bonus                  compiles cub3D executable (again)
-make test MAP={path_to_map} compiles and executes cub3D with the specified map
-make git                    adds and commits everything, then pushes to upstream branch
-make norminette             runs norminette for all files in the project that need to pass it
-```
-
-## References
-
-* [vinibiavatti1 - RayCastingTutorial](https://github.com/vinibiavatti1/RayCastingTutorial/wiki)
-* [Lode's Tutorial Part 1](https://lodev.org/cgtutor/raycasting.html)
-* [Lode's Tutorial Part 2](https://lodev.org/cgtutor/raycasting2.html)
-* [Lode's Tutorial Part 3](https://lodev.org/cgtutor/raycasting3.html)
-* [Lode's Tutorial Part 4](https://lodev.org/cgtutor/raycasting4.html)
-* [42docs - miniLibX](https://harm-smits.github.io/42docs/libs/minilibx)
-
-## Summary
-
-After learning the basics of the ``miniLibX`` graphics library in the [so_long](https://gitlab.com/madebypixel02/so_long) project, this project was quicker to do than expected. However, raycasting was a brand new concept with tons of mathematical concepts behind it, so it was a bit tricky to grasp at first. Having said that, it was still a lot of fun :)
-
-February 24th, 2022
