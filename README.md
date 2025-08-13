@@ -1,6 +1,4 @@
 
-*My first RayCaster with miniLibX *
-
 <div align="center">
     <img src="https://user-images.githubusercontent.com/40824677/156563198-ac320c5a-be9e-43cc-9bcf-cd49670661e4.gif">
 </div>
